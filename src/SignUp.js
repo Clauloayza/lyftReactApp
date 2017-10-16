@@ -29,7 +29,7 @@ class SignUp extends Component {
 			}
 		}
 		
-	  otherFlag(num) {
+	  changeFlag(num) {
 			this.setState({
 				currentFlag: num,
 				checked: false
@@ -39,7 +39,7 @@ class SignUp extends Component {
 	render() {
 	  const {model} = this.props;
   
-	  const changeImput =(e)=> {
+	  const onInputChange =(e)=> {
 			if (e.target.value.length === this.flags[this.state.currentFlag].length) {
         this.setState({
 					checked: true,
@@ -113,13 +113,13 @@ class SignUp extends Component {
 									</a>
 									<ul className="dropdown-menu">
                     {this.flags.map((a, index) => {
-                      return <li><a><img className="img-responsive" src={a.src} alt='peru' onClick={() => this.otherFlag(index)} /> {a.country}</a></li>
+                      return <li><a><img className="img-responsive" src={a.src} alt='peru' onClick={() => this.changeFlag(index)} /> {a.country}</a></li>
                     })}
                   </ul>
 								</div>
 								<span className="code"><input id="codeNumber" value={this.flags[this.state.currentFlag].cod}/></span>
-								<input id="number" maxLength='10' type="number" className="form-control" placeholder="1122334455"
-									 onKeyUp={changeImput}
+								<input id="number" minLength='9' maxLength='10' type="number" className="form-control" placeholder="1122334455"
+									 onKeyUp={onInputChange}
 								/>
 							</div>
 							<br/>

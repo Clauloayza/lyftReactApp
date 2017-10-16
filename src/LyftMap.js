@@ -9,6 +9,99 @@ import ReactGoogleAutocomplete from './ReactGoogleAutocomplete';
 	Redirect
 } from 'react-router-dom'
 
+class Header extends Component{
+	constructor(props){
+		super(props);
+		this.state={
+			show:false
+		}
+	}
+	render(){
+		const {model}=this.props;
+		const open=()=>{
+			this.setState({
+				show:true
+			})
+		}
+		const close=()=>{
+			this.setState({
+				show:false
+			})
+		}
+
+		return(
+			<header>
+			<img className="img-responsive" id='usuario_logo' onClick={open} alt="" />
+			<img className="img-responsive" alt="" />
+			<span className="fa-stack fa-lg fa-2x">
+				<i className="fa fa-circle fa-stack-2x"></i>
+				<i className="fa fa-gift fa-stack-1x fa-inverse"></i>
+			</span>
+			<div id="mySidenav" className="sidenav" style={{ width: this.state.show ? '250px' : 0 }}>
+				<a href="javascript:void(0)" className="closebtn" onClick={close}>&times;</a>
+				<div id="datos_usuario">
+					<div><strong>Name: </strong>{model.name}</div>
+					<div><strong>Surname: </strong>{model.lastname}</div>
+					<div><strong>Phone: </strong>{model.phone}</div>
+					<div><strong>Email: </strong>{model.email}</div>
+				</div>
+			</div>
+		</header>
+		);
+		}
+}
+
+
+const Price=({model})=>{
+	return(
+		<div>
+		<div>
+			<div className="well precio">
+				<img  alt="carro" />
+				<span><h4>Lyft</h4><p>Fast ride 4 seats</p></span>
+			</div>
+			<div className="well precio">
+				<div className="text-center">
+					<p id="precio">{model.precio}</p>
+					<p>Price stimated</p>
+				</div>
+			</div>
+
+		</div>
+		<NavLink to={"/nextTrip"} type="button" className="btn btn-lg" id="solicitar">Request Lyft</NavLink>
+		</div>
+	)
+}
+
+const MapSetPickup=({model})=>{
+	
+	return(
+		<div>
+			<ReactGoogleAutocomplete onPlaceSelected={(place)=>{
+				model.setTarget(place);
+			}}
+			componentRestrictions={{country:'pe'}}
+			id='destino' className="form-control"/>
+			<button type="button" className="btn" id="ruta" onClick={onPathBtnClick}>Set pickut</button>
+		</div>
+	);
+}
+
+const MapForm = ({model}) => {
+	return (
+		<div className="container">
+			<div className="row">
+				<div id="menu_mapa" className="col-sm-12 col-xs-12">
+					{model.isRouting ?
+						<Price model={model} /> :
+						<MapSetPickup model={model} />
+
+					}
+				</div>
+			</div>
+		</div>
+	);
+}
 
 const LyftMap = ({model}) => {
 
