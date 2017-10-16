@@ -1,0 +1,30 @@
+.home{
+    background-image: url(http://lyftdrivercode.com/wp-content/uploads/2016/01/3041173-poster-p-1-lyft-replacing-its-iconic-mustache-with-a-smaller.jpg);
+    background-position-x: 100%;
+    background-size:cover;
+    background-attachment: fixed;
+    height: 670px;
+}
+.home .header {
+    padding-top: 10%;
+    height:170px ;
+    background: -webkit-linear-gradient(black, rgba(255, 255, 0, 0));
+    background: -o-linear-gradient(black, rgba(255, 255, 0, 0));
+    background: -moz-linear-gradient(black, rgba(255, 255, 0, 0)); 
+    background: linear-gradient(black, rgba(255, 255, 0, 0)); 
+}
+.logo{
+    width: 170px;
+    left:50%;
+}
+
+.btns{
+    position: absolute;
+    top:85%;
+    width: 100%;
+}
+.botonPink{
+    border-color: #D800BF;
+    color: #fff;
+    background: linear-gradient(to right, #7E00BF , #D800BF);
+  }

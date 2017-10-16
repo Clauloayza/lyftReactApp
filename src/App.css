@@ -1,0 +1,141 @@
+#start{
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+
+.autocomplete {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+.logo{
+  padding-top: 10%;
+}
+.borde{
+  border : 5px solid red;
+}
+.div-btn-signup{
+  position: absolute;
+  bottom: .5vh;
+}
+.btn-lyft{
+  background-color: #D90472;
+  color:white;
+  border-radius: none;
+}
+.navbar-brand{
+  margin:0 auto;
+}
+nav{
+  border-bottom: 1px solid #999;
+}
+.form{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.info{
+  margin:20px 0 20px 0;
+}
+.dropdown-menu{
+  min-width: 30px;
+}
+.dropdown-item{
+  padding:.25rem 1.2rem;
+}
+.dropdown-toggle{
+  background-color: white;
+  border:1px solid #ccc;
+}
+.inputs{
+  margin:5px 0;
+}
+.inp-l{
+  border-left: 0;
+}
+
+.inp-r{
+  border-right: 0;
+}
+.input-group-addon {
+  background-color: white;
+  border-right: 0;
+}
+#map{
+  width: 100%;
+  height: 100vh;
+}
+.value{
+  width: 50px;
+  border-right: 0;
+  font-weight: bold;
+}
+.sobre{
+  z-index: 100;
+}
+.wrapper {
+  position: relative;
+}
+.over_map {
+  position: absolute;
+  top: 20px;
+  z-index: 99;
+}
+.logo-gift{
+  border-radius: 50%;
+  margin-top:-5px;
+  padding-top: 2%;
+  width: 9vh;
+  height: 9vh;
+  background-color: #fff;
+  border:3px solid #ddd;
+}
+.pie{
+  padding-top:40vh;
+}
+.div-input-address{
+  margin-top: 30vh;
+}
+.start{
+  color:blue;
+}
+.end{
+  color:#D90472;
+}
+.flex{
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.address,.price{
+  border-bottom:1px solid #ccc;
+  width: 100vw;
+  height: 10vh;
+}
+.price{
+  background-color: #eee;
+  height: 10vh;
+}
+.address{
+  display: flex;
+  align-items: center;
+  background-color: white;
+  flex-wrap: wrap;
+  padding-top: 2.5vh;
+
+}
+.car{
+  float:left;
+}
+#labocode{
+  justify-content: center;
+  margin:0 auto;
+  padding-top: 50vw;
+
+}
